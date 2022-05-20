@@ -33,7 +33,7 @@ $students = [
 
 <?php for ($i=0; $i < count($students) ; $i++) { ?>
     <p>
-    <?php  echo $students[$i]['first_name'] . ' ' . $students[$i]['last_name'] . ' media voti:' . array_sum($students[$i]['votes']) / count($students[$i]['votes']);   ;
+    <?php  echo $students[$i]['first_name'] . ' ' . $students[$i]['last_name'] . ' media voti: ' . array_sum($students[$i]['votes']) / count($students[$i]['votes']);   ;
 } ?>
 
     
