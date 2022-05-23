@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* Creare un array di array. 
 Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e 
@@ -47,38 +47,41 @@ $posts = [
     ],
 ];
 
-foreach ($variable as $key => $value) {
-    # code...
-}
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snack 3</title>
 </head>
+
 <body>
 
-<?php foreach ($posts as $data_key=> $data) {
-    foreach ($data as $value) {
-        foreach ($value as $key => $post) {
-            $post_details =  $post; ?>
-            <ul>
-                <h5><?php echo $data_key ?></h5>
-                <li>
-                    <?php echo $key . ': ' . $post?>
-                </li>
-            </ul>
+    <?php foreach ($posts as $data_key => $data) {
+        foreach ($data as $value) { ?>
+
+
+            <h5><?php echo $data_key ?></h5>
             <?php
+            foreach ($value as $key => $post) {
+                $post_details =  $post; ?>
+                <ul>
+
+                    <li>
+                        <?php echo $key . ': ' . $post ?>
+                    </li>
+                </ul>
+    <?php
+            }
         }
-    }
-} ?>
+    } ?>
 
 
-    
+
 </body>
+
 </html>
