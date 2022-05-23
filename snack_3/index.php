@@ -61,24 +61,26 @@ $posts = [
 
 <body>
 
-    <?php foreach ($posts as $data_key => $data) {
-        foreach ($data as $value) { ?>
+    <?php foreach ($posts as $data_key => $data) { ?>
+        <h5><?php echo $data_key ?></h5>
 
+        <? foreach ($data as $value) { ?>
 
-            <h5><?php echo $data_key ?></h5>
-            <?php
-            foreach ($value as $key => $post) {
-                $post_details =  $post; ?>
-                <ul>
+    
+       
+                <?php
+                foreach ($value as $key => $post) {
+                    $post_details =  $post; ?>
+                            <ul>
 
                     <li>
                         <?php echo $key . ': ' . $post ?>
                     </li>
-                </ul>
-    <?php
+            </ul>
+<?php
+                }
             }
-        }
-    } ?>
+        } ?>
 
 
 
