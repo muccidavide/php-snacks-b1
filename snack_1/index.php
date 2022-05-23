@@ -20,9 +20,9 @@ $match = [
 <body>
 
   
-    <?php
-for ($i = 0; $i < count($match); $i++) { ?>
-    <p>
+<?php
+    for ($i = 0; $i < count($match); $i++) { ?>
+     <p>
     <?php echo $match[$i]['team_1'] . " - " . $match[$i]['team_2'] . " | " .  $match[$i]['points_1'] . " - " . $match[$i]['points_2'];
 }
 ?>
