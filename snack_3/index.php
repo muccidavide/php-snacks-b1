@@ -63,16 +63,17 @@ foreach ($variable as $key => $value) {
 </head>
 <body>
 
-<?php foreach ($posts as $data) {
+<?php foreach ($posts as $data_key=> $data) {
     foreach ($data as $value) {
         foreach ($value as $key => $post) {
             $post_details =  $post; ?>
             <ul>
+                <h5><?php echo $data_key ?></h5>
                 <li>
                     <?php echo $key . ': ' . $post?>
                 </li>
             </ul>
-            <?php 
+            <?php
         }
     }
 } ?>
